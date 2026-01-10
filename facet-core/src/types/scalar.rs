@@ -64,16 +64,12 @@ pub enum ScalarType {
     /// Primitive type `isize`.
     ISize,
     /// `core::net::SocketAddr`.
-    #[cfg(feature = "net")]
     SocketAddr,
     /// `core::net::IpAddr`.
-    #[cfg(feature = "net")]
     IpAddr,
     /// `core::net::Ipv4Addr`.
-    #[cfg(feature = "net")]
     Ipv4Addr,
     /// `core::net::Ipv6Addr`.
-    #[cfg(feature = "net")]
     Ipv6Addr,
     /// `facet_core::ConstTypeId`.
     ConstTypeId,
@@ -119,7 +115,6 @@ impl Shape {
             }
         }
 
-        #[cfg(feature = "net")]
         if type_id == TypeId::of::<core::net::SocketAddr>() {
             return Some(ScalarType::SocketAddr);
         }
@@ -167,7 +162,6 @@ impl Shape {
             return Some(ScalarType::ConstTypeId);
         }
 
-        #[cfg(feature = "net")]
         {
             use core::net::{IpAddr, Ipv4Addr, Ipv6Addr};
 

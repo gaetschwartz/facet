@@ -26,7 +26,6 @@ std = ["facet-core/std", "alloc"] # Enable standard library support
 all-impls = [
     "alloc",
     "nonzero",
-    "net",
     "bytes",
     "bytestring",
     "camino",
@@ -46,7 +45,6 @@ all-impls = [
 ] # Enable all optional Facet trait implementations for third-party types
 alloc = ["facet-core/alloc"] # Enable allocation support for no_std environments
 nonzero = ["facet-core/nonzero"] # Provide Facet trait implementations for NonZero<T> types
-net = ["facet-core/net"] # Provide Facet trait implementations for network types (SocketAddr, IpAddr, etc.)
 bytes = [
     "facet-core/bytes",
 ] # Provide Facet trait implementations for bytes::Bytes and bytes::BytesMut

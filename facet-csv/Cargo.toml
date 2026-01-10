@@ -25,7 +25,7 @@ zmij = { version = "1", optional = true }
 itoa = { version = "1", optional = true }
 
 [dev-dependencies]
-facet = { path = "../facet", features = ["doc", "net"] }
+facet = { path = "../facet", features = ["doc"] }
 # facet-format-suite = { path = "../facet-format-suite", version = "0.35.0", features = ["third-party"] }
 # indoc = { workspace = true }
 # libtest-mimic = "0.8.1"
@@ -38,7 +38,6 @@ facet = { path = "../facet", features = ["doc", "net"] }
 [features]
 default = []
 fast = ["dep:zmij", "dep:itoa"]
-net = ["facet-format/net", "facet-core/net"]
 
 [lints]
 workspace = true

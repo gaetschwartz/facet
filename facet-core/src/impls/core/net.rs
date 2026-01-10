@@ -1,7 +1,5 @@
 //! Facet implementation for `core::net` types
 
-#![cfg(feature = "net")]
-
 extern crate alloc;
 
 use crate::{

@@ -1312,7 +1312,6 @@ mod camino_types {
 // Network Types
 // =============================================================================
 
-#[cfg(feature = "net")]
 mod net_types {
     use super::*;
     use std::net::{IpAddr, Ipv4Addr, Ipv6Addr, SocketAddr, SocketAddrV4, SocketAddrV6};

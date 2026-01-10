@@ -99,12 +99,13 @@ Some standard library types require feature flags:
 | Feature | Types |
 |---------|-------|
 | `nonzero` | `NonZero<T>` types (`NonZeroU8`, `NonZeroI32`, etc.) |
-| `net` | `SocketAddr`, `IpAddr`, `Ipv4Addr`, `Ipv6Addr`, `SocketAddrV4`, `SocketAddrV6` |
 
 ```toml
 [dependencies]
-facet = { version = "{{ data.versions.facet }}", features = ["nonzero", "net"] }
+facet = { version = "{{ data.versions.facet }}", features = ["nonzero"] }
 ```
+
+Network types (`SocketAddr`, `IpAddr`, `Ipv4Addr`, `Ipv6Addr`, `SocketAddrV4`, `SocketAddrV6`) are always available - no feature flag required.
 
 ## Doc comment extraction
 

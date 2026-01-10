@@ -273,22 +273,18 @@ pub trait FormatSerializer {
                 ScalarValue::Str(Cow::Owned(alloc::string::ToString::to_string(&n)))
             }
             ScalarType::ISize => ScalarValue::I64(*value.get::<isize>().unwrap() as i64),
-            #[cfg(feature = "net")]
             ScalarType::IpAddr => {
                 let addr = *value.get::<core::net::IpAddr>().unwrap();
                 ScalarValue::Str(Cow::Owned(alloc::string::ToString::to_string(&addr)))
             }
-            #[cfg(feature = "net")]
             ScalarType::Ipv4Addr => {
                 let addr = *value.get::<core::net::Ipv4Addr>().unwrap();
                 ScalarValue::Str(Cow::Owned(alloc::string::ToString::to_string(&addr)))
             }
-            #[cfg(feature = "net")]
             ScalarType::Ipv6Addr => {
                 let addr = *value.get::<core::net::Ipv6Addr>().unwrap();
                 ScalarValue::Str(Cow::Owned(alloc::string::ToString::to_string(&addr)))
             }
-            #[cfg(feature = "net")]
             ScalarType::SocketAddr => {
                 let addr = *value.get::<core::net::SocketAddr>().unwrap();
                 ScalarValue::Str(Cow::Owned(alloc::string::ToString::to_string(&addr)))

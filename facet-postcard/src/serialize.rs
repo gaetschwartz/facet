@@ -435,28 +435,24 @@ impl<W: Writer> FormatSerializer for PostcardSerializer<'_, W> {
                 })?;
                 write_varint_signed(v as i64, self.writer)
             }
-            #[cfg(feature = "net")]
             ScalarType::SocketAddr => {
                 let v = *value.get::<core::net::SocketAddr>().map_err(|e| {
                     SerializeError::Custom(alloc::format!("Failed to get SocketAddr: {}", e))
                 })?;
                 self.write_str(&v.to_string())
             }
-            #[cfg(feature = "net")]
             ScalarType::IpAddr => {
                 let v = *value.get::<core::net::IpAddr>().map_err(|e| {
                     SerializeError::Custom(alloc::format!("Failed to get IpAddr: {}", e))
                 })?;
                 self.write_str(&v.to_string())
             }
-            #[cfg(feature = "net")]
             ScalarType::Ipv4Addr => {
                 let v = *value.get::<core::net::Ipv4Addr>().map_err(|e| {
                     SerializeError::Custom(alloc::format!("Failed to get Ipv4Addr: {}", e))
                 })?;
                 self.write_str(&v.to_string())
             }
-            #[cfg(feature = "net")]
             ScalarType::Ipv6Addr => {
                 let v = *value.get::<core::net::Ipv6Addr>().map_err(|e| {
                     SerializeError::Custom(alloc::format!("Failed to get Ipv6Addr: {}", e))

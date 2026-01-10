@@ -769,7 +769,6 @@ mod ordered_float_tests {
 // Network Types Tests
 // =============================================================================
 
-#[cfg(feature = "net")]
 mod net_tests {
     use super::*;
     use std::net::{IpAddr, Ipv4Addr, Ipv6Addr, SocketAddr, SocketAddrV4, SocketAddrV6};

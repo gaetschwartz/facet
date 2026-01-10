@@ -1360,7 +1360,6 @@ fn test_rc_weak() {
 }
 
 #[test]
-#[cfg(feature = "net")]
 fn test_ipv4_addr_parse_from_str() {
     use core::net::Ipv4Addr;
     use facet_reflect::Partial;

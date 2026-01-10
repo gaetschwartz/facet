@@ -39,11 +39,11 @@ mime = { version = "0.3", optional = true }
 [dev-dependencies]
 brotli = "7"
 compact_str = { workspace = true }
-facet = { path = "../facet", features = ["doc", "net", "compact_str", "smol_str"] }
-facet-format = { path = "../facet-format", features = ["jit", "net"] }
+facet = { path = "../facet", features = ["doc", "compact_str", "smol_str"] }
+facet-format = { path = "../facet-format", features = ["jit"] }
 serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
-facet-format-suite = { path = "../facet-format-suite", features = ["third-party", "net", "tokio"] }
+facet-format-suite = { path = "../facet-format-suite", features = ["third-party", "tokio"] }
 indoc = { workspace = true }
 libtest-mimic = "0.8.1"
 smol_str = { workspace = true }
@@ -66,7 +66,6 @@ std = []
 tokio = ["streaming", "dep:tokio"]
 futures-io = ["streaming", "dep:futures-io"]
 jit = ["facet-format/jit"]
-net = ["facet-format/net", "facet-core/net"]
 
 # Axum HTTP integration
 axum = ["std", "dep:axum-core", "dep:http", "dep:http-body-util", "dep:mime"]
